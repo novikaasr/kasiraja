@@ -1,0 +1,1291 @@
+{
+	"info": {
+		"_postman_id": "27ac242c-9017-4fb4-a4fa-5d1de66f7cba",
+		"name": "Kasir Aja Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37892665"
+	},
+	"item": [
+		{
+			"name": "ALL",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"Toko Sedjahtera\",\r\n   \"email\": \"sedjahtera@gmail.com\",\r\n   \"password\": \"sejahtera123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{kasir-aja}}/registration",
+							"host": [
+								"{{kasir-aja}}"
+							],
+							"path": [
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"email\": \"sedjahtera@gmail.com\",\r\n   \"password\": \"sejahtera123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{kasir-aja}}/authentications",
+							"host": [
+								"{{kasir-aja}}"
+							],
+							"path": [
+								"authentications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0NTczZDAwLTkzYTAtNDFhYi1iNDc3LWU3MzdlYzg3YWFmMCIsImNvbXBhbnlJZCI6ImJkNzBhZTllLWE1OWEtNDE1Yi1iNjhlLTBmZmFmZDM5ZTIyYSIsImlhdCI6MTcyNjEyMDIyNn0.doa-FTbT3v5xD1yDGXg40cb5tkBcZKdUbeJmQC6aFBg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"makanan ringan\",\r\n   \"description\": \"makanan ringan dari indofood\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{kasir-aja}}/categories",
+							"host": [
+								"{{kasir-aja}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view-categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0NTczZDAwLTkzYTAtNDFhYi1iNDc3LWU3MzdlYzg3YWFmMCIsImNvbXBhbnlJZCI6ImJkNzBhZTllLWE1OWEtNDE1Yi1iNjhlLTBmZmFmZDM5ZTIyYSIsImlhdCI6MTcyNjEyMDIyNn0.doa-FTbT3v5xD1yDGXg40cb5tkBcZKdUbeJmQC6aFBg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{kasir-aja}}/categories/21ca1cae-afbb-4e9a-b26f-2f62fbd5594e",
+							"host": [
+								"{{kasir-aja}}"
+							],
+							"path": [
+								"categories",
+								"21ca1cae-afbb-4e9a-b26f-2f62fbd5594e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0NTczZDAwLTkzYTAtNDFhYi1iNDc3LWU3MzdlYzg3YWFmMCIsImNvbXBhbnlJZCI6ImJkNzBhZTllLWE1OWEtNDE1Yi1iNjhlLTBmZmFmZDM5ZTIyYSIsImlhdCI6MTcyNjEyMDIyNn0.doa-FTbT3v5xD1yDGXg40cb5tkBcZKdUbeJmQC6aFBg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"update-minuman\",\r\n   \"description\": \"no-minuman\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{kasir-aja}}/categories/21ca1cae-afbb-4e9a-b26f-2f62fbd5594e",
+							"host": [
+								"{{kasir-aja}}"
+							],
+							"path": [
+								"categories",
+								"21ca1cae-afbb-4e9a-b26f-2f62fbd5594e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0NTczZDAwLTkzYTAtNDFhYi1iNDc3LWU3MzdlYzg3YWFmMCIsImNvbXBhbnlJZCI6ImJkNzBhZTllLWE1OWEtNDE1Yi1iNjhlLTBmZmFmZDM5ZTIyYSIsImlhdCI6MTcyNjEyMDIyNn0.doa-FTbT3v5xD1yDGXg40cb5tkBcZKdUbeJmQC6aFBg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"Budi\",\r\n   \"phone\": \"081234567890\",\r\n   \"address\": \"Bandoeng\",\r\n   \"description\": \"Budi anak Pak Edi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{kasir-aja}}/customers",
+							"host": [
+								"{{kasir-aja}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0NTczZDAwLTkzYTAtNDFhYi1iNDc3LWU3MzdlYzg3YWFmMCIsImNvbXBhbnlJZCI6ImJkNzBhZTllLWE1OWEtNDE1Yi1iNjhlLTBmZmFmZDM5ZTIyYSIsImlhdCI6MTcyNjEyMDIyNn0.doa-FTbT3v5xD1yDGXg40cb5tkBcZKdUbeJmQC6aFBg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{kasir-aja}}/customers/c4c46888-0e60-4242-b805-7a59324f1867",
+							"host": [
+								"{{kasir-aja}}"
+							],
+							"path": [
+								"customers",
+								"c4c46888-0e60-4242-b805-7a59324f1867"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0NTczZDAwLTkzYTAtNDFhYi1iNDc3LWU3MzdlYzg3YWFmMCIsImNvbXBhbnlJZCI6ImJkNzBhZTllLWE1OWEtNDE1Yi1iNjhlLTBmZmFmZDM5ZTIyYSIsImlhdCI6MTcyNjEyMDIyNn0.doa-FTbT3v5xD1yDGXg40cb5tkBcZKdUbeJmQC6aFBg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"Budi Doremi\",\r\n   \"phone\": \"08987654321\",\r\n   \"address\": \"Bandung\",\r\n   \"description\": \"Pelanggan VIP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{kasir-aja}}/customers/c4c46888-0e60-4242-b805-7a59324f1867",
+							"host": [
+								"{{kasir-aja}}"
+							],
+							"path": [
+								"customers",
+								"c4c46888-0e60-4242-b805-7a59324f1867"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth-register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"Toko Sejahtera\",\r\n   \"email\": \"sejahtera@gmail.com\",\r\n   \"password\": \"sejahtera123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{KasirAja}}/registration",
+					"host": [
+						"{{KasirAja}}"
+					],
+					"path": [
+						"registration"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"Toko Sedjahtera\",\r\n   \"email\": \"sejahtera@gmail.com\",\r\n   \"password\": \"sejahtera123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kasir-api.zelz.my.id/registration",
+							"protocol": "https",
+							"host": [
+								"kasir-api",
+								"zelz",
+								"my",
+								"id"
+							],
+							"path": [
+								"registration"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Sep 2024 12:28:55 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "122"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "WWW-Authenticate,Server-Authorization"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "vary",
+							"value": "origin"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=GIqWidkeRf1u4TX0KyfNxA53fsg9cQgBNTEJj2YZTZqXpQbWO89spj6SwQdK5jRDEYZLlLGiAhfLelHjUVyrOem83c6CylZRz4RvlG0MheVr5TTWZ7j4jgOy3sDN%2B5IBBrcuI0Qvpg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8c17a903da6929bc-IAD"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Toko berhasil didaftarkan\",\n    \"data\": {\n        \"name\": \"Toko Sedjahtera\",\n        \"email\": \"sejahtera@gmail.com\"\n    }\n}"
+				},
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"email\": \"sejahtera@gmail.com\",\r\n   \"password\": \"sejahtera123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kasir-api.zelz.my.id/authentications",
+							"protocol": "https",
+							"host": [
+								"kasir-api",
+								"zelz",
+								"my",
+								"id"
+							],
+							"path": [
+								"authentications"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Sep 2024 12:29:34 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "833"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "WWW-Authenticate,Server-Authorization"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "vary",
+							"value": "origin"
+						},
+						{
+							"key": "cf-cache-status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=6t%2BVRKLS30KC8O0pm9GNmsGbaO6nf0sj7IsxvhGvAYxiYhAX8BTfvOe67n5WJyrfWBJ1tbAHc9tO305JY7yxEjqzXntg3%2BOQNWKUPe%2FRH5T1naV%2Fw9VCz9A5kR%2F7EGJgxFUlNsUoNQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8c17a9f7d889c95a-IAD"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Authentication berhasil ditambahkan\",\n    \"data\": {\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0NmMxZmY5LTFhYWEtNDJkNy1hYTk1LTE5MWM2YmZlNjkzMCIsImNvbXBhbnlJZCI6IjMzYWZmZmU3LTFiOWEtNGEyOS05ZjM1LWQyOTQ2NTUwYTBhMiIsImlhdCI6MTcyNjA1Nzc3M30.n692uFdigMmnTwGO4C-ov1tYITO91MxpxjKRCu631CM\",\n        \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0NmMxZmY5LTFhYWEtNDJkNy1hYTk1LTE5MWM2YmZlNjkzMCIsImNvbXBhbnlJZCI6IjMzYWZmZmU3LTFiOWEtNGEyOS05ZjM1LWQyOTQ2NTUwYTBhMiIsImlhdCI6MTcyNjA1Nzc3M30.e21DsW9HFUoeU4KInxqeZFMQ0Pyuftcvuf8WroLyR9I\",\n        \"user\": {\n            \"id\": \"246c1ff9-1aaa-42d7-aa95-191c6bfe6930\",\n            \"name\": \"Toko Sedjahtera\",\n            \"role\": \"admin\",\n            \"email\": \"sejahtera@gmail.com\",\n            \"officeid\": \"f46e73c5-36e2-47cb-abd8-92b1f04a071a\",\n            \"companyid\": \"33afffe7-1b9a-4a29-9f35-d2946550a0a2\",\n            \"company_name\": \"Toko Sedjahtera\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0NmMxZmY5LTFhYWEtNDJkNy1hYTk1LTE5MWM2YmZlNjkzMCIsImNvbXBhbnlJZCI6IjMzYWZmZmU3LTFiOWEtNGEyOS05ZjM1LWQyOTQ2NTUwYTBhMiIsImlhdCI6MTcyNjA1Nzc3M30.n692uFdigMmnTwGO4C-ov1tYITO91MxpxjKRCu631CM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"makanan ringan\",\r\n   \"description\": \"makanan ringan dari indofood\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kasir-api.zelz.my.id/categories",
+					"protocol": "https",
+					"host": [
+						"kasir-api",
+						"zelz",
+						"my",
+						"id"
+					],
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"makanan ringan\",\r\n   \"description\": \"makanan ringan dari indofood\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kasir-api.zelz.my.id/categories",
+							"protocol": "https",
+							"host": [
+								"kasir-api",
+								"zelz",
+								"my",
+								"id"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Sep 2024 12:39:54 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "147"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "WWW-Authenticate,Server-Authorization"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "vary",
+							"value": "origin"
+						},
+						{
+							"key": "cf-cache-status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=VAMhvmCY3x6g%2B60VRlkYWD4hqQs7wsh5VZwQpQX4XSjx5r4qMaNnrFcU0rMREszuzPXgw7UpfuYB3ohKkEio8J48lglgNi4z1phizK01xA8fFOVSQVEkepUWtjhzWMjv0Y4QrKTtjA%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8c17b922abddc98b-IAD"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Category berhasil ditambahkan\",\n    \"data\": {\n        \"categoryId\": \"4b221006-42fb-40a7-a988-03337653ce90\",\n        \"name\": \"makanan ringan\"\n    }\n}"
+				},
+				{
+					"name": "view",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kasir-api.zelz.my.id/categories/4b221006-42fb-40a7-a988-03337653ce90",
+							"protocol": "https",
+							"host": [
+								"kasir-api",
+								"zelz",
+								"my",
+								"id"
+							],
+							"path": [
+								"categories",
+								"4b221006-42fb-40a7-a988-03337653ce90"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Sep 2024 12:43:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "WWW-Authenticate,Server-Authorization"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "vary",
+							"value": "origin"
+						},
+						{
+							"key": "cf-cache-status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=nTkaZdEI8mRe7eUOfSOPLctb2QG1aUT%2BqFjArQkIaoSf2219AnsB2G5kVktrIB3FVGD7iBDLYfWrXDYq05jye6UGz%2BvlqJITXLBHj1e9dm9yspzwm9ZFtH1dlZDhD0SLB7c3myOYpg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8c17bf13c9070654-IAD"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"category\": {\n            \"name\": \"makanan ringan\",\n            \"description\": \"makanan ringan dari indofood\"\n        }\n    }\n}"
+				},
+				{
+					"name": "update",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"update-minuman\",\r\n   \"description\": \"no-minuman\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kasir-api.zelz.my.id/categories/4b221006-42fb-40a7-a988-03337653ce90",
+							"protocol": "https",
+							"host": [
+								"kasir-api",
+								"zelz",
+								"my",
+								"id"
+							],
+							"path": [
+								"categories",
+								"4b221006-42fb-40a7-a988-03337653ce90"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Sep 2024 12:45:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "WWW-Authenticate,Server-Authorization"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "vary",
+							"value": "origin"
+						},
+						{
+							"key": "cf-cache-status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=HWt1t21VMUZgrikZjqD%2B5TJzd7pm1Y21Hv8StUy%2BhrKyIOpFnXjkGQlC1NAc0XrgGiO8IOqtNLLxsvWG1HyEnv%2FJeJTrJ5V39X1zE1uwaUiRuUhAdehASp6WLrlO6Y5zHYcIiklT%2BA%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8c17c0f6daff07d3-IAD"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"name\": \"update-minuman\"\n    }\n}"
+				},
+				{
+					"name": "delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kasir-api.zelz.my.id/categories/4b221006-42fb-40a7-a988-03337653ce90",
+							"protocol": "https",
+							"host": [
+								"kasir-api",
+								"zelz",
+								"my",
+								"id"
+							],
+							"path": [
+								"categories",
+								"4b221006-42fb-40a7-a988-03337653ce90"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Sep 2024 12:46:02 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "WWW-Authenticate,Server-Authorization"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "vary",
+							"value": "origin"
+						},
+						{
+							"key": "cf-cache-status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=Zzp%2FvFEDtRx%2BlHIg0ay6UY67aVMff1%2FyvEbp7gLXVB36GsDE%2B7xEi1Ow2A4ziAkgTSRVAP8S9uUS9cIQD19NQlvvufSjLH1fORWM%2B5fZW7KhA83M7KvjRLhJJAk3J7arjqFotKm2xw%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8c17c21c3acfc920-IAD"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "Customers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0NmMxZmY5LTFhYWEtNDJkNy1hYTk1LTE5MWM2YmZlNjkzMCIsImNvbXBhbnlJZCI6IjMzYWZmZmU3LTFiOWEtNGEyOS05ZjM1LWQyOTQ2NTUwYTBhMiIsImlhdCI6MTcyNjA1Nzc3M30.n692uFdigMmnTwGO4C-ov1tYITO91MxpxjKRCu631CM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kasir-api.zelz.my.id/customers/4873d20e-520a-484f-ad69-774fc7d8647a",
+					"protocol": "https",
+					"host": [
+						"kasir-api",
+						"zelz",
+						"my",
+						"id"
+					],
+					"path": [
+						"customers",
+						"4873d20e-520a-484f-ad69-774fc7d8647a"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"Budi\",\r\n   \"phone\": \"081234567890\",\r\n   \"address\": \"Bandoeng\",\r\n   \"description\": \"Budi anak Pak Edi\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kasir-api.zelz.my.id/customers",
+							"protocol": "https",
+							"host": [
+								"kasir-api",
+								"zelz",
+								"my",
+								"id"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Sep 2024 12:53:56 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "137"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "WWW-Authenticate,Server-Authorization"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "vary",
+							"value": "origin"
+						},
+						{
+							"key": "cf-cache-status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=zL52XFIhpYagM8jnZFVnU4gbNy9GoqfMZz8Y28O3P%2F8LD27GAeWE6V9pXV8wAD3A097mRMOmNTVRtSq18pcNhD4Jb4degxsTgXJm1XatTohiRV23bk3vK1fxDDVrDNyPGh5LLJ4UVQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8c17cdacea775a94-IAD"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Customer berhasil ditambahkan\",\n    \"data\": {\n        \"customerId\": \"4873d20e-520a-484f-ad69-774fc7d8647a\",\n        \"name\": \"Budi\"\n    }\n}"
+				},
+				{
+					"name": "view",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kasir-api.zelz.my.id/customers/4873d20e-520a-484f-ad69-774fc7d8647a",
+							"protocol": "https",
+							"host": [
+								"kasir-api",
+								"zelz",
+								"my",
+								"id"
+							],
+							"path": [
+								"customers",
+								"4873d20e-520a-484f-ad69-774fc7d8647a"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Sep 2024 12:55:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "WWW-Authenticate,Server-Authorization"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "vary",
+							"value": "origin"
+						},
+						{
+							"key": "cf-cache-status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=CD239b5H97vejiH1Ifanhs1%2FK%2F2yVeu%2FMEL0vm9HeY2%2F9rW%2BDyGs5T8pWez27yYmlFeMfJDq7RyBuYP0SwbEeJJYiOPLGQitDZAt6Qiu66qlbP4X%2BDucY0BrxPxdd0Pr8fP1KLdhmg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8c17cf727a6d2022-IAD"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"customer\": {\n            \"name\": \"Budi\",\n            \"phone\": \"081234567890\",\n            \"address\": \"Bandoeng\",\n            \"description\": \"Budi anak Pak Edi\"\n        }\n    }\n}"
+				},
+				{
+					"name": "update",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"Budi Doremi\",\r\n   \"phone\": \"08987654321\",\r\n   \"address\": \"Bandung\",\r\n   \"description\": \"Pelanggan VIP\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kasir-api.zelz.my.id/customers/4873d20e-520a-484f-ad69-774fc7d8647a",
+							"protocol": "https",
+							"host": [
+								"kasir-api",
+								"zelz",
+								"my",
+								"id"
+							],
+							"path": [
+								"customers",
+								"4873d20e-520a-484f-ad69-774fc7d8647a"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Sep 2024 12:55:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "WWW-Authenticate,Server-Authorization"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "vary",
+							"value": "origin"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=K5OOrhnwuIyavYq0vCy24IAbOziKrn2VkaBsaCRDmgDw8bJ9AOnrNv7XDEWwQ1I492jwZWlyUjUs3KWJe%2BmMFXrUKohFdqr%2FVJhx1k33aPbXLDemWtD%2B%2F6UHip%2BbtsjzGT4GrSUF5Q%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8c17d0a65e7e9c82-IAD"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"name\": \"Budi Doremi\"\n    }\n}"
+				},
+				{
+					"name": "delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kasir-api.zelz.my.id/customers/4873d20e-520a-484f-ad69-774fc7d8647a",
+							"protocol": "https",
+							"host": [
+								"kasir-api",
+								"zelz",
+								"my",
+								"id"
+							],
+							"path": [
+								"customers",
+								"4873d20e-520a-484f-ad69-774fc7d8647a"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Sep 2024 12:56:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "access-control-expose-headers",
+							"value": "WWW-Authenticate,Server-Authorization"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "vary",
+							"value": "origin"
+						},
+						{
+							"key": "cf-cache-status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=5nsaTJrQr3xQ7LuBBIy5P0ogGNQjUvLlYVEZuBozk%2BZllBpDRWIRTMxaJOGteh7N4sjfKza%2FgV1HaTFazHBM0AbT0S1DEs8i%2Fy7O7n1ZkCD%2Fv6AD%2FuKVt996AbRvhZa97T8Rrb4Kbw%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8c17d167da26c96a-IAD"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {}\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "KasirAja",
+			"value": "https://kasir-api.belajarqa.com"
+		},
+		{
+			"key": "kasir-aja",
+			"value": "https://kasir-api.zelz.my.id"
+		}
+	]
+}
